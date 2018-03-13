@@ -39,4 +39,12 @@ public class AddressBookTest {
         assertEquals(list3, addressBook.streetList("ул.Колотушкина"));
 
     }
+
+    @Test
+    public void changeAddress() {
+        AddressBook addressBook = new AddressBook();
+        addressBook.addAddress("Васильев", "ул.Колотушкина", "дом 1", "кв.34");
+        addressBook.changeAddress("Васильев", "ул.Подложкино", "дом 23", "кв. 27");
+        assertEquals("ул.Подложкино, дом 23, кв. 27", addressBook.findAddress("Васильев"));
+    }
 }
