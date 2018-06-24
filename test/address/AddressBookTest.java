@@ -39,4 +39,18 @@ public class AddressBookTest {
         assertEquals(list3, addressBook.streetList("ул.Колотушкина"));
 
     }
+
+    @Test
+    public void stringBufferTest(){
+        String string = "abcd\nthyfnb \n jfne";
+        String[] stringArr = string.split("");
+        StringBuffer sb = new StringBuffer("");
+        int n = 0;
+        while (n < string.length()) {
+            sb.append(stringArr[n]);
+            n++;
+        }
+        assertEquals("abcdthyfnb \n jfne", sb.toString());
+        assertEquals(20, n);
+    }
 }

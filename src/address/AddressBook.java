@@ -51,7 +51,9 @@ public final class AddressBook{
     public ArrayList<String> buildingList(String street, String building){
         ArrayList<String> people = new ArrayList<>();
         for (Address element: list){
-            if (element.street.equals(street) && element.building.equals(building)) people.add(element.name);
+            if (element.street.equals(street) && element.building.equals(building)) {
+                people.add(element.name);
+            }
         }
         return people;
     }
